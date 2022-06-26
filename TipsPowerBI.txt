@@ -1,0 +1,16 @@
+Date = 
+ADDCOLUMNS(
+    CALENDARAUTO() ,
+    "Année" , YEAR( [Date] ) ,
+    "Num Mois" , MONTH( [Date] ) ,
+    "Mois" , FORMAT( [Date] , "MMMM" ) ,
+    "Num Trimestre" , FORMAT( [Date] , "TQ" ) ,
+    "Trimestre" , FORMAT( [Date] , "Tri\me\stre Q" ) ,
+    "Trimestre Année" , FORMAT( [Date] , "TQ YYYY" ) ,
+    "Année Trimestre" , FORMAT( [Date] , "YYYY TQ" ) ,
+    "Mois Année" , FORMAT( [Date] , "MM YYYY" ) ,
+    "Année Mois" , FORMAT( [Date] , "YYYY MM" ),   "Jour de la semaine",       FORMAT( [Date] , "dddd" ))
+
+
+
+TrendDownPU = if(Saisie[Evol AffichagePU An-1] < 0, "▼" )
